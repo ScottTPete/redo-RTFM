@@ -1,0 +1,47 @@
+* {
+	box-sizing: border-box;
+
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	display: flex;
+}
+.comment {
+	margin-top: 15px;
+}
+
+.threadLink {
+	text-decoration: none;
+	color: red;
+}
+.threadLink:hover {
+	color: black;
+}
+.threadList {
+	margin-top: 15px;
+}
+.userThread {
+	color: cadetblue;
+}
+
+
+.threadsHeader {
+	color: pink;
+	margin: 0;
+}
+.threadTitle {
+	color: pink;
+}
+.threadAuthor {
+	color: coral;
+}
+.commentAuthor {
+	color: red;
+}
+.commentText {
+	color: cadetblue;
+}

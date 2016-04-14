@@ -1,0 +1,13 @@
+<div>
+	<h1 class="threadHeader"><span class="threadTitle">{{thread.title}}</span> by <span class="threadAuthor">{{thread.username}}</span></h1>
+
+	<form name="newCommentForm">
+		<input type="text" ng-model="newCommentText" placeholder="Write a comment..." required/>
+		<input type="text" ng-model="username" placeholder="Username..." required/>
+		<button ng-disabled="newCommentForm.$invalid" ng-click="createComment(username, newCommentText)">Add Comment</button>
+	</form>
+
+	<ul>
+		<li ng-repeat="comment in comments" class='comment'><span class="commentAuthor">{{ comment.username }}:</span>  <span class='commentText'>{{ comment.text }}</span></li>
+	</ul>
+</div>
