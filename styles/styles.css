@@ -8,7 +8,7 @@ html, body {
 	height: 100%;
 	margin: 0 auto;
 	padding: 0;
-	display: flex;
+	
 }
 .comment {
 	margin-top: 15px;
@@ -44,4 +44,15 @@ html, body {
 }
 .commentText {
 	color: cadetblue;
+}
+.navBar {
+	width: 100%;
+	height: 5%;
+}
+.homeLink {
+	text-decoration: none;
+	color: mediumpurple;
+}
+.homeLink:hover {
+	color: paleturquoise;
 }
