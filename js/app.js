@@ -16,6 +16,8 @@ angular.module('rtfmApp', ['ui.router', 'firebase'])
 				controller: 'threadsCtrl',
 				templateUrl: '../views/threads.html',
 				resolve: {
+					
+					//creates ref accessed by threadsCtrl that returns threads
 					threadsRef: function(threadSvc) {
 						return threadSvc.getThreads();
 					}
@@ -26,9 +28,13 @@ angular.module('rtfmApp', ['ui.router', 'firebase'])
 				controller: 'threadCtrl',
 				templateUrl: '../views/thread.html',
 				resolve: {
+					
+					//creates a ref that's accesed by theadCtrl and the ref returns the specified thread based of the threadId
 					threadRef: function(threadSvc, $stateParams) {
 						return threadSvc.getThread($stateParams.threadId);
 					},
+					
+					//creates ref to comments within the specified threadId accessed by threadCtrl
 					commentsRef: function(threadSvc, $stateParams) {
 						return threadSvc.getComments($stateParams.threadId);
 					}
